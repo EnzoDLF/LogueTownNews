@@ -1,0 +1,56 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url('bg.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header, .footer {
+    width: 100%;
+    text-align: center; /* Centre les images dans leur conteneur */
+}
+
+.news-content {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centre les conteneurs d'images */
+    align-items: center; /* Alignement vertical */
+    padding: 20px 0; /* Ajout de padding pour un peu d'espace vertical */
+}
+
+.image-container {
+    width: 30%; /* Réduction de la largeur des conteneurs d'images */
+    margin: 0 15px; /* Ajustement de l'espacement horizontal entre les images */
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.image-container img {
+    width: 100%; /* Les images remplissent leur conteneur */
+    transition: opacity 0.5s ease;
+}
+
+.hover-img {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Pleine largeur dans le conteneur relatif */
+}
+
+.image-container:hover .hover-img {
+    display: block;
+    opacity: 1;
+    z-index: 2; /* Assure que l'image de survol est au-dessus de l'image normale */
+}
+
+.footer {
+    text-align: center;
+    margin-top: auto; /* Assure que le footer reste au bas de la page */
+}
